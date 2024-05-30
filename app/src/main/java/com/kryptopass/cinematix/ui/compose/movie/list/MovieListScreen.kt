@@ -47,7 +47,11 @@ fun MovieListScreen(
                 MovieList(it) { item ->
                     viewModel.submitAction(
                         MovieListUiAction.OnMovieItemClick(
-                            item.movieId
+                            item.movieId,
+                            item.title.toString(),
+                            item.backdropPath,
+                            item.overview,
+                            item.releaseDate
                         )
                     )
                 }

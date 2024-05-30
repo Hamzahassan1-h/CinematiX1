@@ -33,7 +33,13 @@ class MovieListViewModel @Inject constructor(
                 submitSingleEvent(
                     MovieListUiSingleEvent.OpenDetailsScreen(
                         NavRoutes.Movie.routeForMovie(
-                            MovieInput(action.movieId)
+                            MovieInput(
+                                action.movieId,
+                                action.title,
+                                action.backdropPath,
+                                action.overview,
+                                action.releaseDate
+                            )
                         )
                     )
                 )
